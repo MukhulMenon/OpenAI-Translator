@@ -1,0 +1,108 @@
+*{
+  font-family: "Inter",sans-serif;
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  background-color: azure;
+}
+
+h1{
+  margin-top: 0;
+  color: black;
+  font-family: "Poppins",sans-serif;
+}
+
+.container{
+max-width: 1200px;
+margin: 32px auto;
+background-color: white;
+padding: 16px 32px;
+box-shadow: 0 4px 40px -8px rgba(0, 0,0, 0.2);
+height: 800px;
+border-radius: 15px;
+}
+.container form{
+  display: flex;
+  flex-direction: column;
+  gap:32px
+}
+.container form label{
+  background: #0456ba ;
+  color: white;
+  height: 40px;
+  width: 100px;
+  display: flex;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.container form input[type='radio']:checked +label{
+  background-color:#02387a ;
+  font-weight: bold;
+}
+.container .choices{
+display: flex;
+gap: 30px;
+}
+.container form input[type="radio"]{
+  display: none;
+}
+.container textarea{
+  padding: 16px;
+  font-size: 20px;
+  height: 250px;
+  resize: none;
+  line-height: 1.7px;
+  border: 1px solid #02387a;
+  border-radius: 15px;
+}
+.container button{
+  padding: 12px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #1aa323;
+  color: black;
+  cursor: pointer;
+}
+
+.translation{
+  padding: 12px 32px;
+  background-color: azure;
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.7;
+  height: 250px;
+  border: 1px solid ;
+  overflow-y: scroll;
+  position: relative;
+  overflow-y: hidden;
+  border-radius: 15px;
+}
+.translation .copybtn{
+  position: absolute;
+  width: 20px;
+  top: 12px;
+  right: 12px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.notification{
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,100px);
+  padding:12px 24px;
+  transition: all 400ms ease;
+  border-radius: 20px;
+  border: 1px solid;
+}
+.notification.active{
+  transform: translate(-50%,-30px);
+}
+.error{
+  color: red;
+}
